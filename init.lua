@@ -1,6 +1,0 @@
-require("config.options")
-require("config.keybinds")
-require("config.lazy")
-require("config.cpp-new")
-require("config.python")
-require("config.dap")
