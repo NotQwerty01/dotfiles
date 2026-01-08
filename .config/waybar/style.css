@@ -1,0 +1,161 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "AnonymicePro Nerd Font Propo";
+  font-size: 17px;
+
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#waybar > box {
+  margin: 6px 0;
+}
+
+.modules-center {
+  background: #282828;
+  border: 2px solid #c35e0a;
+  padding: 5px 12px;
+}
+
+.modules-left {
+  background: #282828;
+  border: 2px solid #c35e0a;
+  padding: 5px 6px;
+}
+
+.modules-right {
+  background: #282828;
+  border: 2px solid #c35e0a;
+  padding: 5px 6px;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+
+tooltip label {
+  color: #ebdbb2;
+}
+
+#g-workspace {
+  color: #ebdbb2;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+#workspaces {
+  color: #98971a;
+}
+
+#workspaces button {
+  transition: all 250ms ease-in-out;
+  color: #98971a;
+  padding: 0 5px;
+  border-radius: 18px;
+  margin: 0 1px;
+}
+
+#workspaces button.empty {
+  color: #ebdbb2;
+}
+
+#workspaces button.active {
+  transition: all 250ms ease-in-out;
+  color: #076678;
+}
+
+#record {
+  color: #ebdbb2;
+  font-weight: bold;
+}
+
+#mpris {
+  font-style: italic;
+  padding: 0 5px;
+}
+
+#clock,
+#battery,
+#network,
+#memory,
+#cpu,
+#pulseaudio,
+#backlight {
+  color: #ebdbb2;
+}
+
+#backlight,
+#clock,
+#pulseaudio {
+  font-weight: bold;
+  margin: 5px;
+}
+
+#backlight {
+  color: #b47109;
+  padding: 0 15px 0 6px;
+  border-right: 1px solid #fbf1c7;
+}
+
+#clock {
+  margin: 0 10px;
+}
+
+#pulseaudio {
+  color: #4c7a5d;
+  padding: 0 6px 0 15px;
+  border-left: 1px solid #fbf1c7;
+}
+
+#cpu-memory {
+  color: #ebdbb2;
+  font-weight: bold;
+  margin: 5px;
+  padding-right: 10px;
+}
+
+#memory {
+  padding: 0 10px;
+}
+
+#cpu {
+  padding: 0 10px;
+}
+
+#net-battery {
+  color: #ebdbb2;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+#network {
+  padding-right: 10px;
+}
+
+#battery {
+  padding-left: 10px;
+}
+
+#battery.charging {
+  color: #7daea3;
+}
+
+#battery.warning {
+  color: #d8a657;
+}
+
+#battery.critical:not(.charging) {
+  color: #ea6962;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
