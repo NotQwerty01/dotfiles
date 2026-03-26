@@ -2,18 +2,19 @@ return {
 	"stevearc/conform.nvim",
 	config = function()
 		require("conform").setup({
-			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				html = { "prettier", "html" },
-				css = { "prettier" },
+			formaters_by_ft = {
+				c = { "clangd-format" },
+				cpp = { "clang-format" },
+				css = { "css_beautify" },
+				html = { "html_beautify" },
+				lua = { "stylua" },
 				python = { "black" },
-				cpp = { "clang_format" },
+				typescript = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_fallback = true,
 			},
 		})
-	end,
+	end
 }

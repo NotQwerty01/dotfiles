@@ -1,41 +1,61 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "yes"
-vim.opt.cursorline = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 
--- Diagnostics
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = false
+vim.opt.autoindent = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "100"
+vim.opt.showmatch = true
+vim.opt.cmdheight = 1
+vim.opt.completeopt = "menuone,noinsert,noselect"
+vim.opt.pumheight = 10
+vim.opt.pumblend = 10
+vim.opt.winblend = 0
+vim.opt.conceallevel = 0
+vim.opt.concealcursor = ""
+vim.opt.lazyredraw = true
+vim.opt.fillchars = { eob = " " }
+
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+vim.opt.undofile = false
+vim.opt.autoread = true
+vim.opt.autowrite = true
+
+vim.opt.errorbells = false
+vim.opt.backspace = "indent,eol,start"
+vim.opt.selection = "inclusive"
+vim.opt.encoding = "utf-8"
+
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
+vim.opt.redrawtime = 20000
+vim.opt.maxmempattern = 30000
+
+-- vim.opt.shell = "pwsh.exe"
+
 vim.diagnostic.config({
-	float = {
-		border = "single",
-		focusable = true,
-		style = "minimal",
-		source = "always",
-		header = "",
-		prefix = "  ",
-	},
-	virtual_text = {
-		prefix = "󱅶 ",
-	},
+	virtual_text = true,
 	underline = true,
 	update_in_insert = true,
-})
-
--- Colors for diagnostic
-vim.api.nvim_create_autocmd("ColorScheme", {
-	callback = function()
-		local hl = vim.api.nvim_set_hl
-
-		hl(0, "DiagnosticVirtualTextError", { fg = "#f7768e", italic = true })
-		hl(0, "DiagnosticVirtualTextWarn", { fg = "#e0af68", italic = true })
-		hl(0, "DiagnosticVirtualTextInfo", { fg = "#7aa2f7", italic = true })
-		hl(0, "DiagnosticVirtualTextHint", { fg = "#9ece6a", italic = true })
-
-		hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#f7768e" })
-		hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#e0af68" })
-		hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = "#7aa2f7" })
-		hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = "#9ece6a" })
-	end,
 })
