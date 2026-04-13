@@ -2,7 +2,8 @@
 	border: none;
 	border-radius: 0;
 	font-family: "Adwaita Mono";
-	font-size: 14px;
+	font-size: 15px;
+	font-weight: bold;
 
 	min-height: 0;
 	margin: 0;
@@ -10,7 +11,18 @@
 }
 
 window#waybar {
-	background: #24283b;
+	margin: 10px 0;
+	background: #232433;
+}
+
+#waybar>box {
+	margin: 3px 0;
+}
+
+#custom-division {
+	padding: 0 10px;
+	font-weight: bold;
+	color: #3e5380;
 }
 
 #workspaces {
@@ -34,17 +46,62 @@ window#waybar {
 	color: #7199ee;
 }
 
+#mpris {
+	color: #ad8ee6;
+}
+
 #backlight {
 	color: #d7a65f;
 	padding: 0 5px 0 10px;
 }
 
 #clock {
-	color: #a485dd;
+	color: #a9b1d6;
 	padding: 0 5px;
 }
 
 #pulseaudio {
 	color: #95c561;
 	padding: 0 10px 0 0;
+}
+
+#window {
+	color: white;
+}
+
+#cpu {
+	padding: 0 10px;
+	color: #7AA2F7;
+}
+
+#memory {
+	padding: 0 10px;
+	color: #FF9E64;
+}
+
+#network {
+	padding: 0 10px;
+	color: #c0caf5;
+}
+
+#battery {
+	padding: 0 20px 0 10px;
+	color: #2ac3de;
+}
+
+#battery.charging {
+	color: #9ece6a;
+}
+
+#battery.warning {
+	color: #e0af68;
+}
+
+#battery.critical:not(.charging) {
+	color: #803d49;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
