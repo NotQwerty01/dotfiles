@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true
-vim.opt.winborder = "rounded"
+vim.opt.winborder = 'rounded'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -19,18 +19,18 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "100"
+vim.opt.signcolumn = 'yes'
+vim.opt.colorcolumn = '100'
 vim.opt.showmatch = true
 vim.opt.cmdheight = 1
-vim.opt.completeopt = "menuone,noinsert,noselect"
+vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.pumheight = 10
 vim.opt.pumblend = 10
 vim.opt.winblend = 0
 vim.opt.conceallevel = 0
-vim.opt.concealcursor = ""
+vim.opt.concealcursor = ''
 vim.opt.lazyredraw = true
-vim.opt.fillchars = { eob = " " }
+vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -40,15 +40,15 @@ vim.opt.autoread = true
 vim.opt.autowrite = true
 
 vim.opt.errorbells = false
-vim.opt.backspace = "indent,eol,start"
-vim.opt.selection = "inclusive"
-vim.opt.encoding = "utf-8"
+vim.opt.backspace = 'indent,eol,start'
+vim.opt.selection = 'inclusive'
+vim.opt.encoding = 'utf-8'
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.wildmenu = true
-vim.opt.wildmode = "longest:full,full"
+vim.opt.wildmode = 'longest:full,full'
 vim.opt.redrawtime = 20000
 vim.opt.maxmempattern = 30000
 
