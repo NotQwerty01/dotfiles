@@ -6,7 +6,8 @@
 	"modules-left": [
 		"niri/workspaces",
 		"custom/division",
-		"mpris"
+		"mpris",
+		"custom/division"
 	],
 	"modules-center": [
 		"backlight",

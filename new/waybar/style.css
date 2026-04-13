@@ -53,16 +53,19 @@ window#waybar {
 #backlight {
 	color: #d7a65f;
 	padding: 0 5px 0 10px;
+	border-bottom: 2px solid #d7a65f;
 }
 
 #clock {
 	color: #a9b1d6;
 	padding: 0 5px;
+	border-bottom: 2px solid #a9b1d6;
 }
 
 #pulseaudio {
 	color: #95c561;
 	padding: 0 10px 0 0;
+	border-bottom: 2px solid #95c561;
 }
 
 #window {
@@ -70,35 +73,42 @@ window#waybar {
 }
 
 #cpu {
-	padding: 0 10px;
 	color: #7AA2F7;
+	padding: 0 10px;
+	border-bottom: 2px solid #7AA2F7;
 }
 
 #memory {
-	padding: 0 10px;
 	color: #FF9E64;
+	padding: 0 10px;
+	border-bottom: 2px solid #FF9E64;
 }
 
 #network {
-	padding: 0 10px;
 	color: #c0caf5;
+	padding: 0 10px;
+	border-bottom: 2px solid #c0caf5;
 }
 
 #battery {
-	padding: 0 20px 0 10px;
 	color: #2ac3de;
+	padding: 0 20px 0 10px;
+	border-bottom: 2px solid #2ac3de;
 }
 
 #battery.charging {
 	color: #9ece6a;
+	border-bottom: 2px solid #9ece6a;
 }
 
 #battery.warning {
 	color: #e0af68;
+	border-bottom: 2px solid #e0af68;
 }
 
 #battery.critical:not(.charging) {
 	color: #803d49;
+	border-bottom: 2px solid #803d49;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
