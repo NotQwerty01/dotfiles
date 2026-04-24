@@ -1,0 +1,121 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "Adwaita Mono";
+	font-size: 15px;
+	font-weight: bold;
+
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+window#waybar {
+	margin: 10px 0;
+	background: #191724;
+}
+
+#waybar>box {
+	margin: 3px 0;
+}
+
+#custom-division {
+	padding: 0 10px;
+	font-weight: bold;
+	color: #6e6a86;
+}
+
+#workspaces {
+	color: #286983;
+}
+
+#workspaces button {
+	transition: all 250ms ease-in-out;
+	color: #286983;
+	padding: 0 5px;
+	border-radius: 18px;
+	margin: 0 1px;
+}
+
+#workspaces button.empty {
+	color: #e0def4;
+}
+
+#workspaces button.active {
+	transition: all 250ms ease-in-out;
+	color: #ea9d34;
+}
+
+#workspaces button.visible {
+	color: #000000;
+}
+
+#mpris {
+	color: #907aa9;
+}
+
+#backlight {
+	color: #ea9d34;
+	padding: 0 7px 0 10px;
+	border-bottom: 2px solid #ea9d34;
+}
+
+#clock {
+	color: #e0def4;
+	padding: 0 5px;
+	border-bottom: 2px solid #e0def4;
+}
+
+#pulseaudio {
+	color: #56949f;
+	padding: 0 10px 0 0;
+	border-bottom: 2px solid #56949f;
+}
+
+#window {
+	color: #e0def4;
+}
+
+#cpu {
+	color: #ebbcba;
+	padding: 0 10px;
+	border-bottom: 2px solid #ebbcba;
+}
+
+#memory {
+	color: #907aa9;
+	padding: 0 10px;
+	border-bottom: 2px solid #907aa9;
+}
+
+#network {
+	color: #e0def4;
+	padding: 0 10px;
+	border-bottom: 2px solid #e0def4;
+}
+
+#battery {
+	color: #3e8fb0;
+	padding: 0 20px 0 10px;
+	border-bottom: 2px solid #3e8fb0;
+}
+
+#battery.charging {
+	color: #907aa9;
+	border-bottom: 2px solid #907aa9;
+}
+
+#battery.warning {
+	color: #ea9d34;
+	border-bottom: 2px solid #ea9d34;
+}
+
+#battery.critical:not(.charging) {
+	color: #eb6f92;
+	border-bottom: 2px solid #eb6f92;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
