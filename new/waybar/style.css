@@ -1,0 +1,116 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "Adwaita Mono";
+	font-size: 15px;
+	font-weight: bold;
+
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+window#waybar {
+	background: #000000;
+}
+
+#waybar>box {
+	margin: 4px 0;
+}
+
+#custom-division {
+	padding: 0 10px;
+	font-weight: bold;
+	color: #665c54;
+}
+
+#workspaces button {
+	transition: all 250ms ease-in-out;
+	color: #fbf1c7;
+	padding: 0 5px;
+	border-radius: 18px;
+	margin: 0 1px;
+}
+
+#workspaces button.empty {
+	color: #fbf1c7;
+}
+
+#workspaces button.active {
+	transition: all 250ms ease-in-out;
+	color: #458588;
+}
+
+#workspaces button.visible {
+	color: #000000;
+}
+
+#mpris {
+	color: #fb4934;
+}
+
+#backlight {
+	color: #fabd2f;
+	padding: 0 7px 0 10px;
+	border-bottom: 2px solid #fabd2f;
+}
+
+#clock {
+	color: #fbf1c7;
+	padding: 0 5px;
+	border-bottom: 2px solid #fbf1c7;
+}
+
+#pulseaudio {
+	color: #458588;
+	padding: 0 10px 0 0;
+	border-bottom: 2px solid #458588;
+}
+
+#window {
+	color: #fbf1c7;
+}
+
+#cpu {
+	color: #689d6a;
+	padding: 0 10px;
+	border-bottom: 2px solid #689d6a;
+}
+
+#memory {
+	color: #458588;
+	padding: 0 10px;
+	border-bottom: 2px solid #458588;
+}
+
+#network {
+	color: #bdae93;
+	padding: 0 10px;
+	border-bottom: 2px solid #bdae93;
+}
+
+#battery {
+	color: #b16286;
+	padding: 0 20px 0 10px;
+	border-bottom: 2px solid #b16286;
+}
+
+#battery.charging {
+	color: #98971a;
+	border-bottom: 2px solid #98971a;
+}
+
+#battery.warning {
+	color: #fabd2f;
+	border-bottom: 2px solid #fabd2f;
+}
+
+#battery.critical:not(.charging) {
+	color: #fb4934;
+	border-bottom: 2px solid #fb4934;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
